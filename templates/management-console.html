@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% block title %}Management Console{% endblock title%}
+
+    <div class="container">
+        <div class="row">
+            <h1 id="title">Manager Driver</h1>
+            <div class="btn-field-m">
+                <button type="button-a" id="addDriverBtn">Add Driver</button>
+                <table class="table table-hover table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Vehicle Reg Number</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>Matt Sugden</td>
+                        <td>matt@mail.com</td>
+                        <td>AA72 AAA</td>
+                        <td>
+                            <btn-m class="btn btn-warning btn-xs" id="editBtn">Edit</btn-m>
+                            <btn-m class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete?')">Delete</btn-m>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Barry Gibb</td>
+                        <td>barry@mail.com</td>
+                        <td>BG19 BGE</td>
+                        <td>
+                            <btn-m class="btn btn-warning btn-xs" id="editBtn">Edit</btn-m>
+                            <btn-m class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete?')">Delete</btn-m>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

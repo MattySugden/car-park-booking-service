@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% block title %}Vehicle Details{% endblock title%}
+
+    <div class="container">
+        <div class="form-box-v">
+            <h1 id="title">Vehicle Details</h1>
+            <form>
+                <div class="input-group-v">
+                    <div class="input-field" id="vehicleMake">
+                        <i class="fa-solid fa-car-side"></i>
+                        <input type="text" placeholder="Vehicle Make">
+                    </div>
+                    <div class="input-field" id="vehicleModel">
+                        <i class="fa-solid fa-car-side"></i>
+                        <input type="text" placeholder="Vehicle Model">
+                    </div>
+                    <div class="input-field" id="vehicleColour">
+                        <i class="fa-solid fa-palette"></i>
+                        <input type="email" placeholder="Vehicle Colour">
+                    </div>
+                    <div class="input-field" id="registrationNumber">
+                        <i class="fa-solid fa-address-card"></i>
+                        <input type="contact-number" placeholder="Registration Number">
+                    </div>
+                </div>
+                <div class="btn-field-v">
+                    <button type="button" id="registerBtn">Register</button>
+                    <button type="button" id="signinBtn" class="disabled">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script>
+    let registerBtn = document.getElementById("registerBtn");
+    let signinBtn = document.getElementById("signinBtn");
+    let vehicleMake = document.getElementById("vehicleMake");
+    let vehicleModel = document.getElementById("vehicleModel");
+    let title = document.getElementById("title");
+
+    signinBtn.onclick = function() {
+        nameField.style.maxHeight = "0";
+        title.innerHTML = "Sign In";
+        registerBtn.classList.add("disabled");
+        signinBtn.classList.remove("disabled");
+    }
+    registerBtn.onclick = function() {
+        nameField.style.maxHeight = "60px";
+        title.innerHTML = "Register";
+        registerBtn.classList.remove("disabled");
+        signinBtn.classList.add("disabled");
+    }
+</script>
+{% endblock content %}

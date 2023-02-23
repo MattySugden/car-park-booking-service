@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% block title %}Register{% endblock title%}
+
+    <div class="container">
+        <div class="form-box-r">
+            <h1 id="title">Register</h1>
+            <form>
+                <div class="input-group-r">
+                    <div class="input-field" id="firstNameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="input-field" id="lastNameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-mobile-retro"></i>
+                        <input type="contact-number" placeholder="Contact Number">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Enter Password">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <div class="btn-field-r">
+                    <button type="button" id="registerBtn">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script>
+    let registerBtn = document.getElementById("registerBtn");
+    let signinBtn = document.getElementById("signinBtn");
+    let firstNameField = document.getElementById("firstNameField");
+    let lastNameField = document.getElementById("lastNameField");
+    let title = document.getElementById("title");
+
+    signinBtn.onclick = function() {
+        nameField.style.maxHeight = "0";
+        title.innerHTML = "Sign In";
+        registerBtn.classList.add("disabled");
+        signinBtn.classList.remove("disabled");
+    }
+    registerBtn.onclick = function() {
+        nameField.style.maxHeight = "60px";
+        title.innerHTML = "Register";
+        registerBtn.classList.remove("disabled");
+        signinBtn.classList.add("disabled");
+    }
+</script>
+{% endblock content %}
