@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% block title %}Vehicle Summary{% endblock title%}
+
+    <div class="container">
+        <div class="row">
+            <h1 id="title">Vehicle Summary</h1>
+            <table class="summary">
+                <tr>
+                    <th>Vehicle make:</th>
+                    <td>Range Rover</td>
+                </tr>
+                <tr>
+                    <th>Vehicle model:</th>
+                    <td>Velar</td>
+                </tr>
+                <tr>
+                    <th>Vehicle colour:</th>
+                    <td>Black</td>
+                </tr>
+                <tr>
+                    <th>Vehicle registration:</th>
+                    <td>MS23 SUG</td>
+                </tr>
+            </table>
+                <div class="button"
+                    <button class="medium" id="confirmBtn"><span></span>Confirm</button>
+                    <button class="medium" onclick="return confirm('Are you sure you want to cancel registration?')"><span></span>Cancel</button>
+                </div>
+        </div>
+    </div>
+
+{% endblock content %}

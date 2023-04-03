@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% block title %}Driver Summary{% endblock title%}
+
+    <div class="container">
+        <div class="row">
+            <h1 id="title">Driver Summary</h1>
+            <table class="summary">
+                <tr>
+                    <th>Full name:</th>
+                    <td>Matthew Sugden</td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td>matt.mail.com</td>
+                </tr>
+                <tr>
+                    <th>Contact number:</th>
+                    <td>07711 223344</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="medium" id="confirmBtn"><span></span>Confirm</button>
+                        <button class="medium" onclick="return confirm('Are you sure you want to cancel registration?')"><span></span>Cancel</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+{% endblock content %}

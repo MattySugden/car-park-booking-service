@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% block title %}Registration Summary{% endblock title%}
+
+    <div class="container">
+        <div class="row">
+            <h1 id="title">Registration Summary</h1>
+            <table>
+                <tr>
+                    <th>Full name:</th>
+                    <td>Matthew Sugden</td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td>matt@mail.com</td>
+                </tr>
+                <tr>
+                    <th>Contact number:</th>
+                    <td>07711 223344</td>
+                </tr>
+                <tr>
+                    <th>Password:</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Vehicle make:</th>
+                    <td>Range Rover</td>
+                </tr>
+                <tr>
+                    <th>Vehicle model:</th>
+                    <td>Velar</td>
+                </tr>
+                <tr>
+                    <th>Vehicle colour:</th>
+                    <td>Black</td>
+                </tr>
+                <tr>
+                    <th>Vehicle registration:</th>
+                    <td>MS23 SUG</td>
+                </tr>
+                <tr>
+                    <div class="button">
+                        <button class="medium" id="confirmBtn"><span></span>Confirm</button>
+                        <button class="medium" onclick="return confirm('Are you sure you want to cancel registration?')"><span></span>Cancel</button>
+                    </div>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+{% endblock content %}

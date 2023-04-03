@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% block title %}Register{% endblock title%}
+
+    <div class="container">
+        <div class="form-box-r">
+            <h1 id="title">Register</h1>
+            <form>
+                <div class="input-group-r">
+                    <div class="input-field" id="firstNameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="input-field" id="lastNameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="input-field" id="emailField">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field" id="contactNumberField">
+                        <i class="fa-solid fa-mobile-retro"></i>
+                        <input type="contact-number" placeholder="Contact Number">
+                    </div>
+                    <div class="input-field" id="passwordField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Enter Password">
+                    </div>
+                    <div class="input-field" id="confirmPasswordField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="medium" onclick="{{ url_for('vehicle_details') }}" id="nextBtn"><span></span>Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script>
+    let nextBtn = document.getElementById("nextBtn");
+    let firstNameField = document.getElementById("firstNameField");
+    let lastNameField = document.getElementById("lastNameField");
+    let emailField = document.getElementById("emailField");
+    let passwordField = document.getElementById("passwordField");
+    let confirmPassword = document.getElementById("confirmPasswordField")
+    let title = document.getElementById("title");
+
+
+    nextBtn.onclick = function() {
+        nameField.style.maxHeight = "60px";
+        title.innerHTML = "title";
+        registerBtn.classList.remove("disabled");
+        signinBtn.classList.add("disabled");
+        location.href ="{{ url_for('vehicle_details') }}"
+    }
+</script>
+{% endblock content %}
